@@ -25,7 +25,7 @@ SECRET_KEY = 'a^f!p0-(n-j3+i7p#7q(*o#1np&hd3xs@4sq*h(h8mrz4r8+=s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -132,8 +132,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
-
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage' 
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
