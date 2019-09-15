@@ -25,7 +25,7 @@ SECRET_KEY = 'a^f!p0-(n-j3+i7p#7q(*o#1np&hd3xs@4sq*h(h8mrz4r8+=s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['exbook-wd.herokuapp.com','127.0.0.1']
 
 
 # Application definition
