@@ -41,6 +41,8 @@ class Book(models.Model) :
     category = models.ManyToManyField(Category, related_name="category")
     publisher = models.CharField(max_length=255,null=True)
     condition = models.IntegerField(validators=[MinValueValidator(1),MaxValueValidator(10)])
+    original_price = models.IntegerField()
+    discounted_price = models.IntegerField()
     language = models.CharField(max_length=20)
     date = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE,related_name="user")

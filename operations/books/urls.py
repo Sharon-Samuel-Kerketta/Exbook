@@ -5,6 +5,6 @@ from django.urls import reverse
 
 router = DefaultRouter()
 router.register(r'books', BookViewSet, basename='books')
-router.register(r'authors',AuthorViewSet)
-router.register(r'categories',CategoryViewSet)
+router.register(r'authors',AuthorViewSet,base_name='authors')
+router.register(r'categories',CategoryViewSet,base_name='categories')
 urlpatterns = router.urls
