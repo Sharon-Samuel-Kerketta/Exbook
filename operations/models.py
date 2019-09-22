@@ -35,7 +35,7 @@ class Category(models.Model):
         verbose_name_plural = 'Category'
 
 class Book(models.Model) :
-    isbn = models.CharField(max_length=13,null=True,blank=True)
+    isbn = models.CharField(max_length=13,null=True,blank=True,unique=True)
     name = models.CharField(max_length=255)
     author = models.ManyToManyField(Author,related_name="author")
     category = models.ManyToManyField(Category, related_name="category")
@@ -47,6 +47,7 @@ class Book(models.Model) :
     language = models.CharField(max_length=20)
     date = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE,related_name="user")
+    image = models.ImageField()
     def __str__(self):
         return self.name
     class Meta:
