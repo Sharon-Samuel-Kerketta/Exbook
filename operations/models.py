@@ -47,6 +47,7 @@ class Book(models.Model) :
     language = models.CharField(max_length=20)
     date = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE,related_name="user")
+    user_fire_id = models.CharField(max_length=100)
     image = models.ImageField()
     def __str__(self):
         return self.name
