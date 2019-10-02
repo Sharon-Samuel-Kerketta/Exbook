@@ -40,7 +40,7 @@ class Book(models.Model) :
     author = models.ManyToManyField(Author,related_name="author")
     category = models.ManyToManyField(Category, related_name="category")
     publisher = models.CharField(max_length=255,null=True)
-    description = models.CharField(max_length=255)
+    description = models.TextField()
     condition = models.IntegerField(validators=[MinValueValidator(1),MaxValueValidator(10)])
     original_price = models.IntegerField()
     discounted_price = models.IntegerField()
